@@ -1,0 +1,23 @@
+{
+  "name": "module18_challenge_social-network-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoko-cyer/Module18_challenge_Social-Network-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yoko-cyer/Module18_challenge_Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/Yoko-cyer/Module18_challenge_Social-Network-API#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
