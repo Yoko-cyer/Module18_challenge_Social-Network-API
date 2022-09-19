@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
     "url": "https://github.com/Yoko-cyer/Module18_challenge_Social-Network-API/issues"
   },
   "homepage": "https://github.com/Yoko-cyer/Module18_challenge_Social-Network-API#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  },
   "devDependencies": {
     "nodemon": "^2.0.19"
   }

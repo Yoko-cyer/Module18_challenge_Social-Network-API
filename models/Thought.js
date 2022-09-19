@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+// reaction schema to use inside thoughts schema
 const userSchema = new Schema(
   {
     username: {
@@ -22,7 +23,7 @@ const userSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Thought',
+        ref: 'Thoughts',
       },
     ],
     friends: [
@@ -44,25 +45,23 @@ const Course = model('user', userSchema);
 
 module.exports = Course;
 
-// username
-
-// String
-// Unique
-// Required
-// Trimmed
-
-// email
+// thoughtText
 
 // String
 // Required
-// Unique
-// Must match a valid email address (look into Mongoose's matching validation)
+// Must be between 1 and 280 characters
+// createdAt
 
-// thoughts
-// Array of _id values referencing the Thought model
+// Date
+// Set default value to the current timestamp
+// Use a getter method to format the timestamp on query
+// username (The user that created this thought)
 
-// friends
-// Array of _id values referencing the User model (self-reference)
+// String
+// Required
+// reactions (These are like replies)
 
+// Array of nested documents created with the reactionSchema
 // Schema Settings:
-// Create a virtual called friendCount that retrieves the length of the user's friends array field on query.
+
+// Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.
